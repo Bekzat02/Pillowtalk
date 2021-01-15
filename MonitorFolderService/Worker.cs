@@ -15,7 +15,7 @@ namespace MonitorFolderService
         private readonly ILogger<Worker> _logger;
         private readonly IEmailSender _emailSender;
         private FileSystemWatcher watcher;
-        private readonly string directory = @"C:\Users\OneDrive\Рабочий стол\MyFolder";
+        private readonly string directory = @"C:\Users\samja\Desktop\Escape";
 
         public Worker(ILogger<Worker> logger, IEmailSender emailSender)
         {
@@ -42,7 +42,7 @@ namespace MonitorFolderService
         {
             _logger.LogInformation("A new message about to be sent at: {time}", DateTimeOffset.Now);
             var message = new Message(new string[] {
-                "z.myrzatayev@astanait.edu.kz"}, "SE-1908 Test Program", "This is the content for the SE-1908", fullPath);
+                "bekzatakhmetov02@gmail.com"}, "Hiiii baby", "This is the content for the SE-1907", fullPath);
             _emailSender.SendEmail(message);
         }
 
